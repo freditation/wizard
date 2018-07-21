@@ -82,12 +82,12 @@ public class Planner {
         this.addressLine1 = addressLine1;
     }
 
-    public String getAddressLine2() {
-        return addressLine2;
-    }
-
     public void setAddressLine2(String addressLine2) {
         this.addressLine2 = addressLine2;
+    }
+
+    public String getAddressLine2() {
+        return addressLine2;
     }
 
     public String getAddressLine3() {
@@ -117,6 +117,7 @@ public class Planner {
 
     public void removeClient(Client client) {
         this.clients.remove(client);
+        client.setPlanner(null);
     }
 
     public boolean hasClient(Client client) {

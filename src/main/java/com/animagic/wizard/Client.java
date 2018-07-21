@@ -1,7 +1,7 @@
 package com.animagic.wizard;
 
+import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 
 public class Client {
     private String name;
@@ -9,6 +9,7 @@ public class Client {
     private Calendar clientDateOfBirth;
     private Calendar partnerDateOfBirth;
     private Planner planner;
+    private ArrayList<Asset> assets;
 
     public Client(String name) {
         this.name = name;
@@ -78,4 +79,19 @@ public class Client {
         return this.name.equals(client.getName());
     }
 
+    public ArrayList<Asset> getAssets() {
+        return assets;
+    }
+
+    public void setAssets(ArrayList<Asset> assets) {
+        this.assets = assets;
+    }
+
+    public void addAsset(Asset asset) {
+        this.assets.add(asset);
+    }
+
+    public void removeAsset(Asset asset) {
+        this.assets.remove(asset);
+    }
 }
